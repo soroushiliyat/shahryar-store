@@ -1,5 +1,9 @@
 const en = {
-  languageToggle: "Switch Language",
+   languageToggle: {
+    fa: "Farsi",
+    en: "English",
+  },
+
 
   navbar: {
     home: "Home",

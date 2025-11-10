@@ -1,5 +1,8 @@
 const fa = {
-   languageToggle: "تغییر زبان",
+   languageToggle: {
+    fa: "فارسی",
+    en: "انگلیسی",
+  },
 
   navbar: {
     home: "خانه",
