@@ -1,0 +1,171 @@
+import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../context/LanguageContext";
+import fa from "../content/fa";
+import en from "../content/en";
+
+export default function Navbar() {
+  const { language } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const t = language === "fa" ? fa.navbar : en.navbar;
+
+  useEffect(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    if (savedMode === "true") {
+      setDarkMode(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode.toString());
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  useEffect(() => {
+    setVisible(false);
+    const timeout = setTimeout(() => {
+      setVisible(true);
+    }, 50);
+    return () => clearTimeout(timeout);
+  }, [language]);
+
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent | TouchEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleSwipeRight = (e: TouchEvent) => {
+      const touch = e.changedTouches[0];
+      const startX = touch.clientX;
+      const handleEnd = (endEvent: TouchEvent) => {
+        const endX = endEvent.changedTouches[0].clientX;
+        if (endX - startX > 80) {
+          setIsOpen(false);
+        }
+        document.removeEventListener("touchend", handleEnd);
+      };
+      document.addEventListener("touchend", handleEnd);
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("touchstart", handleOutsideClick);
+      document.addEventListener("touchstart", handleSwipeRight);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+      document.removeEventListener("touchstart", handleSwipeRight);
+    };
+  }, [isOpen]);
+
+  type NavKey = "home" | "products" | "about";
+
+  const navItems: { key: NavKey; to: string }[] = [
+    { key: "home", to: "/" },
+    { key: "products", to: "/products" },
+    { key: "about", to: "/about" },
+  ];
+
+  return (
+    <header className="w-full fixed top-0 z-50">
+      <nav
+        className={`font-vazirmatn max-w-7xl mx-auto px-6 py-4 flex items-center justify-between text-black dark:text-white transition-colors duration-500 ${
+          visible ? "opacity-100 translate-y-0 animate-fadeUp" : "opacity-0 translate-y-2"
+        }`}
+      >
+        {/* دکمه زبان و حالت تاریک برای دسکتاپ */}
+        <div className="flex items-center gap-4">
+          <div className="text-[15px] md:text-base scale-[0.75] md:scale-100">
+            <LanguageToggle />
+          </div>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="hidden md:inline-block text-black dark:text-white text-xl hover:text-yellow-400 transition-all duration-300 transform hover:-translate-y-1"
+            aria-label="Toggle Dark Mode"
+          >
+            <span className="inline-block transition-transform duration-500 ease-in-out scale-100">
+              {darkMode ? "☀️" : "🌙"}
+            </span>
+          </button>
+        </div>
+
+        {/* منوی وسطی */}
+        <div className="hidden md:flex gap-4 text-sm font-medium">
+          {navItems.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-black dark:text-white bg-transparent px-3 py-1 rounded-md transition duration-300 ease-in-out hover:text-white hover:bg-black hover:scale-105"
+            >
+              {t[item.key]}
+            </Link>
+          ))}
+        </div>
+
+        {/* لوگو سمت راست */}
+        <div className="font-vazirmatn text-base z-60 md:text-2xl font-bold tracking-tight mt-2 md:mt-5 text-orange-500 animate-flameText w-40 text-center truncate">
+          {t.logo}
+        </div>
+
+        {/* دکمه همبرگری موبایل */}
+        <button
+          className="md:hidden text-black dark:text-white focus:outline-none"
+          onClick={() => setIsOpen(true)}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
+      {/* منوی موبایل با اسلاید از راست */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-screen w-1/3 bg-black/60 backdrop-blur-md px-4 py-10 md:hidden text-sm font-medium transition-transform duration-500 ease-in-out z-40 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <ul className="flex flex-col items-center text-center w-full gap-5">
+          {navItems.map((item) => (
+            <li
+              key={item.to}
+              className="w-full py-5 border-b border-white/30"
+            >
+              <Link
+                to={item.to}
+                onClick={() => setIsOpen(false)}
+                className="block text-white hover:text-yellow-400 transition duration-300"
+              >
+                {t[item.key]}
+              </Link>
+            </li>
+          ))}
+
+          {/* آخرین آیتم: دکمه حالت تاریک فقط در موبایل */}
+          <li className="w-full py-5">
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="block w-full text-white hover:text-yellow-400 transition duration-300"
+            >
+              {darkMode ? "☀️" : "🌙"}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+  );
+}
