@@ -1,4 +1,6 @@
 const fa = {
+   languageToggle: "تغییر زبان",
+
   navbar: {
     home: "خانه",
     products: "محصولات",

@@ -1,4 +1,6 @@
 const en = {
+  languageToggle: "Switch Language",
+
   navbar: {
     home: "Home",
     products: "Products",
