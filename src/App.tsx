@@ -4,11 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
-<<<<<<< HEAD
-
-=======
->>>>>>> a9cf2ea5351261c0eab374cc67eeb465d219547f
-import { LanguageProvider } from "./context/LanguageContext"; // اضافه شد
+import { LanguageProvider } from "./context/LanguageContext";
 import "./App.css";
 
 function App() {
@@ -32,10 +28,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
-<<<<<<< HEAD
-            
-=======
->>>>>>> a9cf2ea5351261c0eab374cc67eeb465d219547f
           </Routes>
         </div>
 
