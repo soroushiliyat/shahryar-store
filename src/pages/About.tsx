@@ -1,93 +1,52 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import fa from "../content/fa";
 import en from "../content/en";
+import tractorImage from "../assets/tractor.jpg.png";
 
-export default function AboutUs() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+export default function Home() {
   const { language } = useLanguage();
-  const t = language === "fa" ? fa.aboutUs : en.aboutUs;
-  const textAlign = language === "fa" ? "text-right" : "text-left";
+  const t = language === "fa" ? fa.home : en.home;
 
   const [fadeTrigger, setFadeTrigger] = useState(false);
+  const textAlign = language === "en" ? "md:text-left" : "md:text-right";
 
   useEffect(() => {
     setFadeTrigger(true);
-    const timeout = setTimeout(() => setFadeTrigger(false), 600);
+    const timeout = setTimeout(() => setFadeTrigger(false), 600); // مدت انیمیشن
     return () => clearTimeout(timeout);
   }, [language]);
 
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      style={{ contentVisibility: "auto" }}
-      className="relative z-10 scroll-mt-20 h-[400px] md:h-[400px] overflow-y-auto md:overflow-y-scroll max-w-4xl mx-auto px-4 py-8 font-vazirmatn custom-scroll transition-all duration-[1200ms] ease-out"
-    >
-      {/* عنوان اصلی با انیمیشن */}
-      <h2
-        style={{ willChange: "transform, opacity" }}
-        className={`text-2xl font-bold mb-6 text-orange-600 dark:text-yellow-400 text-center transition-colors duration-700 ${
-          fadeTrigger ? "animate-fadeUp" : ""
-        }`}
-      >
-        {t.title}
-      </h2>
+    <main className="w-full min-h-[70vh] md:min-h-[8vh] text-black font-vazirmatn px-4 pt-8 pb-32 overflow-x-hidden">
+      <div className="w-full mx-auto flex flex-col md:flex-row items-center md:items-start gap-x-16 p-4 rounded-xl">
+        {/* متن با انیمیشن فقط هنگام تغییر زبان */}
+        <div
+          style={{ willChange: "transform, opacity" }}
+          className={`md:ml-[100px] w-full md:w-[30%] h-[220px] overflow-y-auto md:overflow-y-scroll px-4 text-center translate-x-2 scrollbar-thin scrollbar-thumb-orange-400 scrollbar-track-transparent transition-all duration-500 ease-in-out ${textAlign} ${
+            fadeTrigger ? "animate-fadeUp" : ""
+          }`}
+        >
+          <h1 className="text-xl font-bold mb-4 dark:text-white transition-colors duration-500">
+            {t.title}
+          </h1>
+          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-500">
+            {t.description}
+          </p>
+        </div>
 
-      {/* توضیحات اصلی با انیمیشن */}
-      <p
-        style={{ willChange: "transform, opacity" }}
-        className={`text-gray-700 dark:text-gray-300 leading-relaxed text-justify transition-colors duration-700 ${textAlign} ${
-          fadeTrigger ? "animate-fadeUp" : ""
-        }`}
-      >
-        {t.description}
-      </p>
-
-      {/* ویژگی‌ها با انیمیشن */}
-      <ul
-        style={{ willChange: "transform, opacity" }}
-        className={`mt-4 list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-700 ${textAlign} ${
-          fadeTrigger ? "animate-fadeUp" : ""
-        }`}
-      >
-        {t.features.map((feature, i) => (
-          <li key={i}>{feature}</li>
-        ))}
-      </ul>
-
-      {/* مأموریت با انیمیشن */}
-      <p
-        style={{ willChange: "transform, opacity" }}
-        className={`mt-6 text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-700 ${textAlign} ${
-          fadeTrigger ? "animate-fadeUp" : ""
-        }`}
-      >
-        {t.mission}
-      </p>
-
-      {/* عنوان کشورها بدون انیمیشن */}
-      <h3 className="text-xl font-bold mt-10 mb-4 text-orange-600 dark:text-yellow-400 text-center transition-colors duration-700">
-        {t.countriesTitle}
-      </h3>
-
-      {/* پرچم کشورها بدون انیمیشن */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-        {t.countries.map(({ code, name }) => (
-          <div
-            key={code}
-            style={{ willChange: "transform, opacity" }}
-            className="p-4 rounded-lg transition duration-300 bg-transparent text-black dark:text-white text-center"
-          >
-            <img
-              src={`/flags/${code}.png`}
-              alt={`Flag of ${name}`}
-              className="w-24 h-16 object-cover animate-subtleWave mx-auto"
-            />
-            <div className="mt-2 text-lg font-semibold">{name}</div>
-          </div>
-        ))}
+        {/* تصویر ثابت بدون انیمیشن */}
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end self-start mt-6 md:mt-0 md:mr-auto">
+          <img
+            src={tractorImage}
+            alt={t.image_alt}
+            width={320}
+            height={320}
+            className="w-48 h-48 md:w-60 md:h-60 rounded-lg mt-3"
+            loading="lazy"
+          />
+        </div>
       </div>
-    </section>
+    </main>
   );
 }
