@@ -9,10 +9,11 @@ export default function AboutUs() {
   const t = language === "fa" ? fa.aboutUs : en.aboutUs;
   const textAlign = language === "fa" ? "text-right" : "text-left";
 
-  const [visible, setVisible] = useState(false);
+  const [fadeTrigger, setFadeTrigger] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setVisible(true), 100);
+    setFadeTrigger(true);
+    const timeout = setTimeout(() => setFadeTrigger(false), 600);
     return () => clearTimeout(timeout);
   }, [language]);
 
@@ -20,39 +21,57 @@ export default function AboutUs() {
     <section
       id="about"
       ref={sectionRef}
-      style={{ willChange: "transform, opacity", contentVisibility: "auto" }}
-      className={`relative z-10 scroll-mt-20 h-[400px] md:h-[400px] overflow-y-auto md:overflow-y-scroll max-w-4xl mx-auto px-4 py-8 font-vazirmatn custom-scroll transition-all duration-[1200ms] ease-out transform ${
-        visible ? "opacity-100 translate-y-0 animate-fadeUp" : "opacity-0 translate-y-8"
-      }`}
+      style={{ contentVisibility: "auto" }}
+      className="relative z-10 scroll-mt-20 h-[400px] md:h-[400px] overflow-y-auto md:overflow-y-scroll max-w-4xl mx-auto px-4 py-8 font-vazirmatn custom-scroll transition-all duration-[1200ms] ease-out"
     >
-      {/* عنوان اصلی */}
-      <h2 className="text-2xl font-bold mb-6 text-orange-600 dark:text-yellow-400 text-center transition-colors duration-700">
+      {/* عنوان اصلی با انیمیشن */}
+      <h2
+        style={{ willChange: "transform, opacity" }}
+        className={`text-2xl font-bold mb-6 text-orange-600 dark:text-yellow-400 text-center transition-colors duration-700 ${
+          fadeTrigger ? "animate-fadeUp" : ""
+        }`}
+      >
         {t.title}
       </h2>
 
-      {/* توضیحات اصلی */}
-      <p className={`text-gray-700 dark:text-gray-300 leading-relaxed text-justify transition-colors duration-700 ${textAlign}`}>
+      {/* توضیحات اصلی با انیمیشن */}
+      <p
+        style={{ willChange: "transform, opacity" }}
+        className={`text-gray-700 dark:text-gray-300 leading-relaxed text-justify transition-colors duration-700 ${textAlign} ${
+          fadeTrigger ? "animate-fadeUp" : ""
+        }`}
+      >
         {t.description}
       </p>
 
-      {/* ویژگی‌ها */}
-      <ul className={`mt-4 list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-700 ${textAlign}`}>
+      {/* ویژگی‌ها با انیمیشن */}
+      <ul
+        style={{ willChange: "transform, opacity" }}
+        className={`mt-4 list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-700 ${textAlign} ${
+          fadeTrigger ? "animate-fadeUp" : ""
+        }`}
+      >
         {t.features.map((feature, i) => (
           <li key={i}>{feature}</li>
         ))}
       </ul>
 
-      {/* مأموریت */}
-      <p className={`mt-6 text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-700 ${textAlign}`}>
+      {/* مأموریت با انیمیشن */}
+      <p
+        style={{ willChange: "transform, opacity" }}
+        className={`mt-6 text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-700 ${textAlign} ${
+          fadeTrigger ? "animate-fadeUp" : ""
+        }`}
+      >
         {t.mission}
       </p>
 
-      {/* عنوان کشورها */}
+      {/* عنوان کشورها بدون انیمیشن */}
       <h3 className="text-xl font-bold mt-10 mb-4 text-orange-600 dark:text-yellow-400 text-center transition-colors duration-700">
         {t.countriesTitle}
       </h3>
 
-      {/* پرچم کشورها */}
+      {/* پرچم کشورها بدون انیمیشن */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
         {t.countries.map(({ code, name }) => (
           <div
