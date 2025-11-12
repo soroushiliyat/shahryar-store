@@ -3,6 +3,8 @@ import { useLanguage } from "../context/LanguageContext";
 import fa from "../content/fa";
 import en from "../content/en";
 
+type InfoKey = "office" | "mobile" | "email" | "address" | "credit";
+
 export default function Footer() {
   const { language } = useLanguage();
   const t = language === "fa" ? fa.footer : en.footer;
@@ -11,11 +13,9 @@ export default function Footer() {
     language === "fa" ? "text-[10px] sm:text-xs" : "text-[9px] sm:text-[11px]";
 
   const [visible, setVisible] = useState(false);
-  const [activeInfo, setActiveInfo] = useState<
-    null | "office" | "mobile" | "email" | "address" | "credit"
-  >(null);
+  const [activeInfo, setActiveInfo] = useState<InfoKey | null>(null);
 
-  const handleToggle = (key: typeof activeInfo) => {
+  const handleToggle = (key: InfoKey) => {
     setActiveInfo((prev) => (prev === key ? null : key));
   };
 
@@ -35,7 +35,7 @@ export default function Footer() {
     }
   }, [language]);
 
-  const contactItems = [
+  const contactItems: { key: InfoKey; label: string; value: string }[] = [
     { key: "office", label: t.office, value: t.office_tel },
     { key: "mobile", label: t.mobile, value: t.mobile_tel },
     { key: "email", label: t.email, value: t.email_adress },
