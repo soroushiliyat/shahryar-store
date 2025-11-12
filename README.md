@@ -2,6 +2,11 @@
 
 A real-world industrial React website built for Shahryar Store — designed, developed, and deployed by [Soroush Iliyat](https://github.com/soroushiliyat). This project showcases responsive design, multilingual support, and performance optimization tailored for Iranian and international markets.
 
+
+## 💡 Purpose
+
+This project was built as a real-world industrial storefront for Shahryar Store, with the goal of showcasing modern UI/UX, multilingual support, and performance optimization. It also serves as a portfolio piece for international employment and migration readiness.
+
 ---
 
 ## 🚀 Live Demo
@@ -18,6 +23,7 @@ A real-world industrial React website built for Shahryar Store — designed, dev
 - **Vercel (CI/CD Deployment)**
 - **GTmetrix for performance benchmarking**
 - **TinyPNG + Squoosh for image optimization**
+- **This project supports both Persian (FA) and English (EN) content. All layout and typography are adapted for RTL and LTR contexts.**
 
 ---
 
