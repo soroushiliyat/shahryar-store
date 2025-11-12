@@ -8,23 +8,23 @@ export default function Home() {
   const { language } = useLanguage();
   const t = language === "fa" ? fa.home : en.home;
 
-  const [visible, setVisible] = useState(false);
+  const [fadeTrigger, setFadeTrigger] = useState(false);
+  const textAlign = language === "en" ? "md:text-left" : "md:text-right";
 
   useEffect(() => {
-    const timeout = setTimeout(() => setVisible(true), 50);
+    setFadeTrigger(true);
+    const timeout = setTimeout(() => setFadeTrigger(false), 600); // مدت انیمیشن
     return () => clearTimeout(timeout);
   }, [language]);
-
-  const textAlign = language === "en" ? "md:text-left" : "md:text-right";
 
   return (
     <main className="w-full min-h-[70vh] md:min-h-[8vh] text-black font-vazirmatn px-4 pt-8 pb-32 overflow-x-hidden">
       <div className="w-full mx-auto flex flex-col md:flex-row items-center md:items-start gap-x-16 p-4 rounded-xl">
-        {/* متن با انیمیشن */}
+        {/* متن با انیمیشن فقط هنگام تغییر زبان */}
         <div
           style={{ willChange: "transform, opacity" }}
           className={`md:ml-[100px] w-full md:w-[30%] h-[220px] overflow-y-auto md:overflow-y-scroll px-4 text-center translate-x-2 scrollbar-thin scrollbar-thumb-orange-400 scrollbar-track-transparent transition-all duration-500 ease-in-out ${textAlign} ${
-            visible ? "opacity-100 translate-y-0 animate-fadeUp" : "opacity-0 translate-y-2"
+            fadeTrigger ? "animate-fadeUp" : ""
           }`}
         >
           <h1 className="text-xl font-bold mb-4 dark:text-white transition-colors duration-500">
@@ -35,7 +35,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* تصویر ثابت */}
+        {/* تصویر ثابت بدون انیمیشن */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end self-start mt-6 md:mt-0 md:mr-auto">
           <img
             src={tractorImage}
