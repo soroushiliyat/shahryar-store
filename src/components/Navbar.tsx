@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [fadeTrigger, setFadeTrigger] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
@@ -38,11 +38,9 @@ export default function Navbar() {
   // Animate navbar on language change (desktop only)
   useEffect(() => {
     if (window.innerWidth >= 768) {
-      setVisible(false);
-      const timeout = setTimeout(() => setVisible(true), 50);
+      setFadeTrigger(true);
+      const timeout = setTimeout(() => setFadeTrigger(false), 600);
       return () => clearTimeout(timeout);
-    } else {
-      setVisible(true);
     }
   }, [language]);
 
@@ -81,10 +79,8 @@ export default function Navbar() {
     <header className="w-full fixed top-0 z-50">
       <nav
         style={{ willChange: "transform, opacity", contentVisibility: "auto" }}
-        className={`font-vazirmatn max-w-7xl mx-auto px-6 py-4 flex items-center justify-between text-black dark:text-white ${
-          visible
-            ? "md:opacity-100 md:translate-y-0 md:animate-fadeUp"
-            : "md:opacity-0 md:translate-y-2"
+        className={`font-vazirmatn max-w-7xl mx-auto px-6 py-4 flex items-center justify-between text-black dark:text-white transition-all duration-500 ease-in-out ${
+          fadeTrigger ? "animate-fadeUp" : ""
         }`}
       >
         {/* زبان و حالت تاریک دسکتاپ */}
