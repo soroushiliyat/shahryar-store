@@ -1,7 +1,7 @@
 const fa = {
    languageToggle: {
     fa: "فارسی",
-    en: "انگلیسی",
+    en: "English",
   },
 
   navbar: {

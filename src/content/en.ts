@@ -1,6 +1,6 @@
 const en = {
    languageToggle: {
-    fa: "Farsi",
+    fa: "فارسی",
     en: "English",
   },
 
