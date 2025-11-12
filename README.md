@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Shahryar Store 🏭
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-world industrial React website built for Shahryar Store — designed, developed, and deployed by [Soroush Iliyat](https://github.com/soroushiliyat). This project showcases responsive design, multilingual support, and performance optimization tailored for Iranian and international markets.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+🔗 [https://shahryar-store-betn.vercel.app](https://shahryar-store-betn.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18 + TypeScript**
+- **Tailwind CSS**
+- **Vite**
+- **Vercel (CI/CD Deployment)**
+- **GTmetrix for performance benchmarking**
+- **TinyPNG + Squoosh for image optimization**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🎯 Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Responsive Layout**: Fully optimized for desktop and mobile with breakpoint-specific logic.
+- **Multilingual Support**: Persian (FA) and English (EN) toggle using context API.
+- **Dark Mode**: Persistent theme toggle with localStorage sync.
+- **Animated UI**: Flame-text, fade-in sections, and scroll-based visibility.
+- **Optimized Assets**: WebP-ready images, lazy loading, and minimal request count.
+- **Modular Components**: Clean separation of Navbar, Footer, Home, Products, and About sections.
+- **Industrial Branding**: Flag animations for importing countries and structured contact info.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📊 GTmetrix Performance (Nov 2025)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Metric | Value |
+|--------|-------|
+| GTmetrix Grade | A |
+| Performance | 94% |
+| Structure | 94% |
+| LCP | 1.1s |
+| TBT | 0ms |
+| CLS | 0 |
+| Total Page Size | 272KB |
+| Total Requests | 5 |
+
+> ✅ No layout shifts, no blocking tasks, and fully loaded under 1.1s.
+
+---
+
+## 📁 Project Structure
+
+src/ ├── assets/              # Optimized images and icons ├── components/          # Navbar, Footer, etc. ├── pages/               # Home, Products, About ├── content/             # fa.ts and en.ts for translations ├── context/             # LanguageContext.tsx ├── App.tsx              # Main layout ├── main.tsx             # Entry point
+
+
+
+---
+
+## 🛠️ Setup Instructions
+
+```bash
+git clone https://github.com/soroushiliyat/shahryar-store.git
+cd shahryar-store
+npm install
+npm run dev
+
+
+📬 Contact
+Developed by Soroush Iliyat
+📧 soroushiliyat23@gmail.com
+📱 +98 936 995 512
+
+📄 License
+This project is licensed under the MIT License.
+Feel free to fork, adapt, or contribute.
