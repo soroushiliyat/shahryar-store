@@ -64,14 +64,6 @@ src/ ├── assets/              # Optimized images and icons ├── compo
 
 ---
 
-## 🛠️ Setup Instructions
-
-```bash
-git clone https://github.com/soroushiliyat/shahryar-store.git
-cd shahryar-store
-npm install
-npm run dev
-
 
 📬 Contact
 Developed by Soroush Iliyat
