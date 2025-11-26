@@ -2,10 +2,13 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
-import About from "./pages/About";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./App.css";
+import React, { Suspense } from "react";
+
+// Lazy load برای صفحات سنگین
+const Products = React.lazy(() => import("./pages/Products"));
+const About = React.lazy(() => import("./pages/About"));
 
 function App() {
   return (
@@ -24,11 +27,13 @@ function App() {
 
         {/* محتوای صفحات */}
         <div className="relative z-20 pt-24 px-6 flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
+          <Suspense fallback={<div className="text-center text-orange-500">Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Suspense>
         </div>
 
         {/* فوتر ثابت پایین صفحه */}
