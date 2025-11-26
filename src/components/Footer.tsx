@@ -53,29 +53,33 @@ export default function Footer() {
         }`}
       >
         {/* اطلاعات تماس با افکت نرم */}
-        <div className="flex flex-row flex-wrap justify-center items-center gap-8 text-center">
-          {contactItems.map(({ key, label, value }) => (
-            <div
-              key={key}
-              className="relative flex flex-col items-center cursor-pointer"
-              onClick={(e) => {
-                e.stopPropagation();
-                handleToggle(key);
-              }}
-            >
-              <span className="font-semibold">{label}</span>
-              <div
-                className={`absolute bottom-full mb-2 px-3 py-2 rounded-md bg-white dark:bg-neutral-800 text-black dark:text-white text-xs shadow-md transition-all duration-300 ease-in-out ${
-                  activeInfo === key
-                    ? "opacity-100 scale-100 pointer-events-auto"
-                    : "opacity-0 scale-95 pointer-events-none"
-                }`}
-              >
-                {value}
-              </div>
-            </div>
-          ))}
-        </div>
+     <div
+  className={`flex flex-row flex-wrap justify-center items-center gap-8 text-center ${
+    language === "fa" ? "text-[12px] sm:text-[13px]" : ""
+  }`}
+>
+  {contactItems.map(({ key, label, value }) => (
+    <div
+      key={key}
+      className="relative flex flex-col items-center cursor-pointer"
+      onClick={(e) => {
+        e.stopPropagation();
+        handleToggle(key);
+      }}
+    >
+      <span className="font-semibold">{label}</span>
+      <div
+        className={`absolute bottom-full mb-2 px-3 py-2 rounded-md bg-white dark:bg-neutral-800 text-black dark:text-white text-xs shadow-md transition-all duration-300 ease-in-out ${
+          activeInfo === key
+            ? "opacity-100 scale-100 pointer-events-auto"
+            : "opacity-0 scale-95 pointer-events-none"
+        }`}
+      >
+        {value}
+      </div>
+    </div>
+  ))}
+</div>
 
         {/* کپی‌رایت و flameText با افکت نرم */}
         <div className="mt-2 w-full flex flex-col sm:flex-row justify-between items-center px-4 gap-2 text-gray-500 dark:text-gray-300 font-bold">
