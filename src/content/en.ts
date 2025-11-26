@@ -1,9 +1,12 @@
-const en = {
-   languageToggle: {
+// src/content/en.ts
+// src/content/en.ts
+import type { LanguageContent } from "./TypesContent";
+
+const en: LanguageContent = {
+  languageToggle: {
     fa: "فارسی",
     en: "English",
   },
-
 
   navbar: {
     home: "Home",
@@ -11,9 +14,10 @@ const en = {
     about: "About Us",
     logo: "Shahryar Store",
   },
-   home: {
+
+  home: {
     title: "Shahryar Industrial & Agricultural Parts Store",
-   description: `With years of experience in supplying tractor and industrial machinery parts, Shahryar Store has become one of Iran’s trusted specialized centers, proudly serving farmers, mechanics, industrial companies, and spare parts retailers across the country.
+    description: `With years of experience in supplying tractor and industrial machinery parts, Shahryar Store has become one of Iran’s trusted specialized centers, proudly serving farmers, mechanics, industrial companies, and spare parts retailers across the country.
 
 We offer a complete range of genuine and custom-made spare parts, technical consulting, industrial design services, and fast nationwide delivery. All parts are sourced from reputable global manufacturers and come with authenticity and quality guarantees.
 
@@ -22,30 +26,27 @@ Our technical team, equipped with deep expertise and hands-on experience, is rea
 High quality, fair pricing, real support, and a commitment to customer satisfaction are the principles we always stand by. Our goal is to build trust, simplify the purchasing process, and enhance productivity in Iran’s agricultural and mechanical industries.
 
 If you're looking for a specific part or need expert guidance, we’re proud to be by your side.`,
-image_alt: "Custom tractor part",
+    image_alt: "Custom tractor part",
   },
-
 
   footer: {
-     copyright: `© ${new Date().getFullYear()} Shahryar Store`,
-  credit: "Designed & developed by Soroush Iliyat",
-
-     address_title: "Store Address",
-
+    copyright: `© ${new Date().getFullYear()} Shahryar Store`,
+    credit: "Designed & developed by Soroush Iliyat",
+    address_title: "Store Address",
     address_full:
-      " Imam Khomeini Square, Naser Khosrow St., Post Alley, Naser Khosrow Passage, 3rd Floor, Unit 5",
+      "Imam Khomeini Square, Naser Khosrow St., Post Alley, Naser Khosrow Passage, 3rd Floor, Unit 5",
     office: "Office",
-    office_tel:"+98-21-33969884",
+    office_tel: "+98-21-33969884",
     mobile: "Mobile & WhatsApp",
-    mobile_tel:" +98-912-524-1399",
-    email: "Gmail ",
-    email_adress:"soroushiliyat23@gmail.com",
-   
+    mobile_tel: "+98-912-524-1399",
+    email: "Gmail",
+    email_adress: "soroushiliyat23@gmail.com",
   },
+
   aboutUs: {
-    title: "About Shahriar Store",
+    title: "About Shahryar Store",
     description:
-      "Shahriar Store has over 20 years of experience in supplying and distributing industrial tractor parts...",
+      "Shahryar Store has over 20 years of experience in supplying and distributing industrial tractor parts...",
     features: [
       "Direct import from China, India, and Turkey",
       "Guaranteed authenticity and quality",
