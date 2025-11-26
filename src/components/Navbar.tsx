@@ -105,7 +105,7 @@ export default function Navbar() {
             <Link
               key={to}
               to={to}
-              className="px-3 py-1 rounded-md transition duration-300 ease-in-out hover:text-white hover:bg-black hover:scale-105"
+              className="px-3 py-1 rounded-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
             >
               {t[key]}
             </Link>
