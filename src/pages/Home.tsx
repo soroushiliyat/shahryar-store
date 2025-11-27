@@ -43,7 +43,6 @@ export default function Home() {
             width={320}
             height={320}
             className="w-48 h-48 md:w-60 md:h-60 rounded-lg mt-3"
-            loading="lazy"
           />
         </div>
       </div>
