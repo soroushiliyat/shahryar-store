@@ -13,7 +13,7 @@ const About = React.lazy(() => import("./pages/About"));
 function App() {
   return (
     <LanguageProvider>
-      <div className="w-screen min-h-screen overflow-x-hidden flex flex-col font-vazirmatn bg-white dark:bg-neutral-900 relative">
+      <div className="w-screen min-h-screen z-30 overflow-x-hidden flex flex-col font-vazirmatn bg-white dark:bg-neutral-900 relative">
         {/* نوار بالا */}
         <Navbar />
 
@@ -26,7 +26,7 @@ function App() {
         <div className="absolute bottom-4 left-4 w-40 h-40 rounded-full bg-teal-400 opacity-70 blur-xl animate-fade z-10"></div>
 
         {/* محتوای صفحات */}
-        <div className="relative z-20 pt-24 px-6 flex-grow">
+        <div className="relative z-20 pt-24 px-6 flex-grow h-[600px]">
           <Suspense fallback={<div className="text-center text-orange-500">Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -37,7 +37,9 @@ function App() {
         </div>
 
         {/* فوتر ثابت پایین صفحه */}
+        <div className="z-30">
         <Footer />
+          </div>
       </div>
     </LanguageProvider>
   );
