@@ -30,6 +30,11 @@ export default function Home() {
           <h1 className="text-xl font-bold mb-4 dark:text-white transition-colors duration-500">
             {t.title}
           </h1>
+          <br/>
+          <h2 className="text-xl font-bold mb-4 dark:text-white transition-colors duration-500">
+            {t.manager}
+          </h2>
+          <br/>
           <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-500">
             {t.description}
           </p>
