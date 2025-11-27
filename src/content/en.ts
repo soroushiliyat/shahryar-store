@@ -42,7 +42,7 @@ Our principles are built on high quality, fair pricing, reliable support, and cu
 aboutUs: {
   title: "About Shahryar Store",
   description:
-    "With over 20 years of experience in supplying and distributing industrial and agricultural tractor parts, Shahryar Store proudly sources its products from the most reputable domestic and international manufacturers. Backed by long-standing expertise and a skilled team, we guarantee authenticity and quality in every part.",
+    "With over 34 years of experience in supplying and distributing industrial and agricultural tractor parts, Shahryar Store proudly sources its products from the most reputable domestic and international manufacturers. Backed by long-standing expertise and a skilled team, we guarantee authenticity and quality in every part.",
   features: [
     "Direct imports from China, India, and Turkey",
     "Guaranteed authenticity and quality of parts",
