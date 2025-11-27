@@ -9,7 +9,7 @@ const fa: LanguageContent = {
 
   navbar: {
     home: "خانه",
-    products: "محصولات",
+    products: "انبار ",
     about: "درباره ما",
     logo: "فروشگاه شهریار",
   },
@@ -61,7 +61,7 @@ aboutUs: {
   },
 
   products: {
-    title: "لیست قطعات تراکتور",
+    title: "لیست انبار ",
     noProducts: "قطعه‌ای یافت نشد",
     items: [
       "لاستیک عقب تراکتور",
