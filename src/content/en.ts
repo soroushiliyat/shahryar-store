@@ -65,15 +65,15 @@ aboutUs: {
     title: "Warehouse List",
     noProducts: "No parts found",
     items: [
-      "Engine and engine parts (cylinder, piston, rings, crankshaft, camshaft, bearings)
-",
-      "Fuel system (fuel pump, injectors, carburetor, fuel tank, fuel filter)",
-      "Cooling system (radiator, water pump, thermostat, hoses)",
-      "Lubrication system (oil pump, oil filter, oil pan, seals)",
-      "Electrical system (alternator, starter, battery, fuses, wiring, lights, gauges)
-",
-      "Transmission system (gearbox, clutch, disc & plate, flywheel, shafts)
-",
+      'Engine and engine parts (cylinder, piston, rings, crankshaft, camshaft, bearings)
+',
+      'Fuel system (fuel pump, injectors, carburetor, fuel tank, fuel filter)',
+      'Cooling system (radiator, water pump, thermostat, hoses)',
+      'Lubrication system (oil pump, oil filter, oil pan, seals)',
+      'Electrical system (alternator, starter, battery, fuses, wiring, lights, gauges)
+',
+      'Transmission system (gearbox, clutch, disc & plate, flywheel, shafts)
+',
       'Hydraulic system (hydraulic pump, hydraulic valve, hydraulic cylinder, hoses)',
       'Steering system (steering box, steering shaft, steering wheel, tie rods)',
       'Brake system (brake drum, brake disc, brake pads, brake pump, brake fluid)',
