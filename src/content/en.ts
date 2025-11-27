@@ -17,15 +17,11 @@ const en: LanguageContent = {
 
   home: {
     title: "Shahryar Industrial & Agricultural Parts Store",
-    description: `With years of experience in supplying tractor and industrial machinery parts, Shahryar Store has become one of Iran’s trusted specialized centers, proudly serving farmers, mechanics, industrial companies, and spare parts retailers across the country.
-
-We offer a complete range of genuine and custom-made spare parts, technical consulting, industrial design services, and fast nationwide delivery. All parts are sourced from reputable global manufacturers and come with authenticity and quality guarantees.
-
-Our technical team, equipped with deep expertise and hands-on experience, is ready to answer your questions and provide precise solutions for selecting the right part. We also support custom orders, performance optimization advice, and tailored technical recommendations.
-
-High quality, fair pricing, real support, and a commitment to customer satisfaction are the principles we always stand by. Our goal is to build trust, simplify the purchasing process, and enhance productivity in Iran’s agricultural and mechanical industries.
-
-If you're looking for a specific part or need expert guidance, we’re proud to be by your side.`,
+    description: `Shahryar Industrial & Agricultural Parts Store
+Managed by Hossein Iliyat, Shahryar Store has over 34 years of proven experience in importing, manufacturing, and distributing spare parts for Romanian tractors, Ferguson 399, 475, 485, and ground engines. With an official license from the Spare Parts Union, it is recognized as one of the country’s specialized centers.
+We provide a complete range of original and custom spare parts, including agricultural and industrial bearings, belts, oil seals, bolts and nuts, gauges, and electrical equipment — all supplied with authenticity and quality guarantees. In addition, we offer technical consulting, industrial design, and fast nationwide delivery.
+Our technical team, with deep expertise and hands-on experience, is ready to answer your questions and provide precise solutions for selecting the right part. Special orders, performance optimization consulting, and tailored technical recommendations are also available.
+Our principles are built on high quality, fair pricing, reliable support, and customer satisfaction. Our mission is to build trust, simplify the purchasing process, and enhance productivity in Iran’s agricultural and mechanical industries. You can shop in-person or place your order via phone call, with full confidence in product authenticity and value.`,
     image_alt: "Custom tractor part",
   },
 
