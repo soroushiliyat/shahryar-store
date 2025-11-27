@@ -47,7 +47,7 @@ export default function AboutUs() {
       {/* ویژگی‌ها با انیمیشن */}
       <ul
         style={{ willChange: "transform, opacity" }}
-        className={`mt-4 list-disc list-inside text-gray-700 dark:text-gray-300 transition-colors duration-700 ${textAlign} ${
+        className={`mt-4 list-none list-inside text-gray-700 dark:text-gray-300 transition-colors duration-700 ${textAlign} ${
           fadeTrigger ? "animate-fadeUp" : ""
         }`}
       >
