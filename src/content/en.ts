@@ -39,18 +39,19 @@ Our principles are built on high quality, fair pricing, reliable support, and cu
     email_adress: "soroushiliyat23@gmail.com",
   },
 
-  aboutUs: {
-    title: "About Shahryar Store",
-    description:
-      "Shahryar Store has over 20 years of experience in supplying and distributing industrial tractor parts...",
-    features: [
-      "Direct import from China, India, and Turkey",
-      "Guaranteed authenticity and quality",
-      "Fast nationwide delivery",
-      "Technical support and expert consultation",
-    ],
-    mission:
-      "Our mission is to develop Iran's agricultural infrastructure by supplying reliable and industrial-grade parts...",
+aboutUs: {
+  title: "About Shahryar Store",
+  description:
+    "With over 20 years of experience in supplying and distributing industrial and agricultural tractor parts, Shahryar Store proudly sources its products from the most reputable domestic and international manufacturers. Backed by long-standing expertise and a skilled team, we guarantee authenticity and quality in every part.",
+  features: [
+    "Direct imports from China, India, and Turkey",
+    "Guaranteed authenticity and quality of parts",
+    "Fast nationwide delivery",
+    "Technical support and professional consulting",
+  ],
+  mission:
+    "Our mission is to strengthen Iran’s agricultural infrastructure by providing reliable industrial parts and sustainable services",
+
     countriesTitle: "Importer of parts from the following countries",
     countries: [
       { name: "China", code: "CN" },
