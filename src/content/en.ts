@@ -10,7 +10,7 @@ const en: LanguageContent = {
 
   navbar: {
     home: "Home",
-    products: "Products",
+    products: "Warehouse",
     about: "About Us",
     logo: "Shahryar Store",
   },
@@ -62,7 +62,7 @@ aboutUs: {
   },
 
   products: {
-    title: "Tractor Parts List",
+    title: "Warehouse List",
     noProducts: "No parts found",
     items: [
       "Rear tractor tire",
