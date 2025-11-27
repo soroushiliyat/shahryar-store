@@ -15,6 +15,7 @@ export interface HomeContent {
   title: string;
   description: string;
   image_alt: string;
+  manager: string;
 }
 
 export interface FooterContent {
