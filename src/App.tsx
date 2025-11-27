@@ -26,7 +26,7 @@ function App() {
         <div className="absolute bottom-4 left-4 w-40 h-40 rounded-full bg-teal-400 opacity-70 blur-xl animate-fade z-10"></div>
 
         {/* محتوای صفحات */}
-        <div className="relative z-20 pt-24 px-6 flex-grow h-full">
+        <div className="relative z-20 pt-24 px-6 flex-grow">
           <Suspense fallback={<div className="text-center text-orange-500">Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
