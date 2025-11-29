@@ -11,8 +11,8 @@ It also serves as a portfolio piece for international employment, especially for
 
 ---
 
-## 🚀 Live Demo
-🔗 [CLICK](https://shahryar-store.vercel.app/)
+## 🚀 Live
+🔗 [www.sharhyarstore.com](www.sharhyarstore.com)
 
 ---
 
