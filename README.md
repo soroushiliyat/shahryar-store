@@ -12,7 +12,7 @@ It also serves as a portfolio piece for international employment, especially for
 ---
 
 ## 🚀 Live Demo
-🔗 [https://shahryar-store-betn.vercel.app](https://shahryar-store-betn.vercel.app)
+🔗 [CLICK](https://shahryar-store.vercel.app/)
 
 ---
 
