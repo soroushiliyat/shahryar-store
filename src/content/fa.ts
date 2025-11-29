@@ -33,9 +33,9 @@ const fa: LanguageContent = {
     address_full:
       "میدان امام خمینی، خیابان ناصرخسرو، کوچه پست، پاساژ ناصرخسرو، طبقه ۳، پلاک ۵",
     office: "دفتر",
-    office_tel: "۰۲۱-۳۳۹۶۹۸۸۴",
+    office_tel: "+98-21-33969884",
     mobile: "موبایل و واتساپ",
-    mobile_tel: "۰۹۱۲۵۲۴۱۳۹۹",
+    mobile_tel: "+98-912-524-1399",
     email: "Gmail",
     email_adress: "soroushiliyat23@gmail.com",
   },
