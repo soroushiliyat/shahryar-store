@@ -12,7 +12,7 @@ It also serves as a portfolio piece for international employment, especially for
 ---
 
 ## 🚀 Live
-🔗 [www.sharhyarstore.com](www.sharhyarstore.com)
+🔗 [sharhyarstore.com](sharhyarstore.com)
 
 ---
 
