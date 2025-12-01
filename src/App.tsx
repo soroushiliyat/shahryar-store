@@ -17,7 +17,7 @@ function App() {
         {/* نوار بالا */}
         <Navbar />
 
-        <p> hhhhhhheeeeelllloooooo </p>
+       
 
         {/* افکت‌های نوری */}
         <div className="absolute inset-0 backdrop-blur-2xl bg-white/80 dark:bg-neutral-900/80 z-0"></div>
