@@ -1,4 +1,8 @@
 // types/content.ts
+
+export type NavbarKey = keyof NavbarContent;
+// یعنی "home" | "products" | "about" | "logo"
+
 export interface LanguageToggle {
   fa: string;
   en: string;
