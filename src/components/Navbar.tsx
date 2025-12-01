@@ -4,7 +4,7 @@ import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "../context/LanguageContext";
 import fa from "../content/fa";
 import en from "../content/en";
-import { NavbarContent, NavbarKey } from "../content/TypesContent";
+import type { NavbarContent, NavbarKey } from "../content/TypesContent";
 
 export default function Navbar() {
 const { language } = useLanguage();
