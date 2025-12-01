@@ -29,10 +29,19 @@ function App() {
         <div className="relative z-20 pt-24 px-6 flex-grow">
           <Suspense fallback={<div className="text-center text-orange-500">Loading...</div>}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
+  {/* فارسی */}
+  <Route path="/fa" element={<Home />} />
+  <Route path="/fa/products" element={<Products />} />
+  <Route path="/fa/about" element={<About />} />
+
+  {/* انگلیسی */}
+  <Route path="/en" element={<Home />} />
+  <Route path="/en/products" element={<Products />} />
+  <Route path="/en/about" element={<About />} />
+
+  {/* مسیر پیش‌فرض */}
+  <Route path="/" element={<Home />} />
+</Routes>
           </Suspense>
         </div>
 
