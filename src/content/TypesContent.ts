@@ -1,20 +1,20 @@
 // types/content.ts
 
 
-export type NavbarKey = keyof NavbarContent;
-
-
-export interface LanguageToggle {
-  fa: string;
-  en: string;
-}
-
 export interface NavbarContent {
   home: string;
   products: string;
   about: string;
   logo: string;
 }
+
+export type NavbarKey = keyof NavbarContent;
+
+export interface LanguageToggle {
+  fa: string;
+  en: string;
+}
+
 
 export interface HomeContent {
   title: string;
