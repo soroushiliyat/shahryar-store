@@ -5,6 +5,11 @@ import Home from "./pages/Home";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./App.css";
 import React, { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
+
+
 
 // Lazy load برای صفحات سنگین
 const Products = React.lazy(() => import("./pages/Products"));
@@ -12,6 +17,7 @@ const About = React.lazy(() => import("./pages/About"));
 
 function App() {
   return (
+    <>
     <LanguageProvider>
       <div className="w-screen min-h-screen z-30 overflow-x-hidden flex flex-col font-vazirmatn bg-white dark:bg-neutral-900 relative">
         {/* نوار بالا */}
@@ -53,6 +59,12 @@ function App() {
           </div>
       </div>
     </LanguageProvider>
+    <Analytics />
+    <SpeedInsights />
+
+
+    </>
+     
   );
 }
 
