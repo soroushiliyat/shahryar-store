@@ -14,11 +14,17 @@ export default function Navbar() {
   const [fadeTrigger, setFadeTrigger] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  const navItems = [
-    { key: "home", to: "/" },
-    { key: "products", to: "/products" },
-    { key: "about", to: "/about" },
-  ] as const;
+const navItems = language === "fa"
+  ? [
+      { key: "home", to: "/fa" },
+      { key: "products", to: "/fa/products" },
+      { key: "about", to: "/fa/about" },
+    ]
+  : [
+      { key: "home", to: "/en" },
+      { key: "products", to: "/en/products" },
+      { key: "about", to: "/en/about" },
+    ];
 
   // Load dark mode from localStorage
   useEffect(() => {
