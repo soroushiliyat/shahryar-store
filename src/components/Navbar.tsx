@@ -4,27 +4,29 @@ import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "../context/LanguageContext";
 import fa from "../content/fa";
 import en from "../content/en";
+import { NavbarContent, NavbarKey } from "../content/types/content";
 
 export default function Navbar() {
-  const { language } = useLanguage();
-  const t = language === "fa" ? fa.navbar : en.navbar;
-
+const { language } = useLanguage();
+const t: NavbarContent = language === "fa" ? fa.navbar : en.navbar;
+  
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [fadeTrigger, setFadeTrigger] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-const navItems = language === "fa"
-  ? [
-      { key: "home", to: "/fa" },
-      { key: "products", to: "/fa/products" },
-      { key: "about", to: "/fa/about" },
-    ]
-  : [
-      { key: "home", to: "/en" },
-      { key: "products", to: "/en/products" },
-      { key: "about", to: "/en/about" },
-    ];
+const navItems: { key: NavbarKey; to: string }[] =
+  language === "fa"
+    ? [
+        { key: "home", to: "/fa" },
+        { key: "products", to: "/fa/products" },
+        { key: "about", to: "/fa/about" },
+      ]
+    : [
+        { key: "home", to: "/en" },
+        { key: "products", to: "/en/products" },
+        { key: "about", to: "/en/about" },
+      ];
 
   // Load dark mode from localStorage
   useEffect(() => {
