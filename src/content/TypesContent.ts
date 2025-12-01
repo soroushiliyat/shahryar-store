@@ -1,5 +1,7 @@
 // types/content.ts
 
+export type NavbarKey = "home" | "products" | "about" | "logo";
+
 export type NavbarKey = keyof NavbarContent;
 // یعنی "home" | "products" | "about" | "logo"
 
