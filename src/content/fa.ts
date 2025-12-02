@@ -37,7 +37,7 @@ const fa: LanguageContent = {
     mobile_tel: "0-912-524-1399",
     email: "Gmail",
     email_adress: "soroushiliyat23@gmail.com",
-    map_link: "https://maps.app.goo.gl/MF9moRUbu2u4NWj8A",
+    map_link: "https://www.google.com/maps/search/?api=1&query=35.6845616,51.4227887",
     map_iframe:  `<iframe src="https://www.google.com/maps/embed?..."></iframe>`,
     latitude: "35.6845616",
     longitude: "51.4227887"
