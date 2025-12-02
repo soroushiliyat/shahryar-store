@@ -76,6 +76,18 @@ export default function Footer() {
         }`}
       >
         {value}
+         {/* دکمه LOC فقط برای آدرس */}
+      {key === "address" && activeInfo === "address" && (
+        <button
+          className="mt-2 px-2 py-1 text-[10px] rounded bg-blue-500 text-white hover:bg-blue-600 transition"
+          onClick={() => {
+            window.open(t.map_link, "_blank");
+          }}
+        >
+          LOC
+        </button>
+      )}
+
       </div>
     </div>
   ))}

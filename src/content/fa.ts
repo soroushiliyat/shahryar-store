@@ -30,14 +30,17 @@ const fa: LanguageContent = {
     copyright: `© ${new Date().getFullYear()} فروشگاه شهریار`,
     credit: "طراحی و توسعه توسط سروش ایلیات",
     address_title: "آدرس فروشگاه",
-    address_full:
-      "میدان امام خمینی، خیابان ناصرخسرو، کوچه پست، پاساژ ناصرخسرو، طبقه ۳، پلاک ۵",
+    address_full: "میدان امام خمینی، خیابان ناصرخسرو، کوچه پست، پاساژ ناصرخسرو، طبقه ۳، پلاک ۵",
     office: "دفتر",
     office_tel: "0-21-33969884",
     mobile: "موبایل و واتساپ",
     mobile_tel: "0-912-524-1399",
     email: "Gmail",
     email_adress: "soroushiliyat23@gmail.com",
+    map_link: "https://maps.app.goo.gl/MF9moRUbu2u4NWj8A",
+    map_iframe:  `<iframe src="https://www.google.com/maps/embed?..."></iframe>`,
+    latitude: "35.6845616",
+    longitude: "51.4227887"
   },
 
 aboutUs: {

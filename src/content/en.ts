@@ -38,6 +38,10 @@ Our principles are built on high quality, fair pricing, reliable support, and cu
     mobile_tel: "+98-912-524-1399",
     email: "Gmail",
     email_adress: "soroushiliyat23@gmail.com",
+     map_link: "https://maps.app.goo.gl/MF9moRUbu2u4NWj8A",
+    map_iframe:  `<iframe src="https://www.google.com/maps/embed?..."></iframe>`,
+    latitude: "35.6845616",
+    longitude: "51.4227887",
   },
 
 aboutUs: {
