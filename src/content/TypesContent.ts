@@ -34,6 +34,10 @@ export interface FooterContent {
   mobile_tel: string;
   email: string;
   email_adress: string;
+   map_link: string;
+  map_iframe: string;
+  latitude: string;
+  longitude: string;
 }
 
 export interface AboutUsContent {
