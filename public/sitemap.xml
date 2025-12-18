@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- صفحه اصلی -->
+
+  <!-- صفحه اصلی (نسخه فارسی canonical) -->
   <url>
-    <loc>https://shahryarstore.com/</loc>
+    <loc>https://www.shahryarstore.com/fa</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -10,7 +11,7 @@
 
   <!-- انبار (Warehouse) -->
   <url>
-    <loc>https://shahryarstore.com/warehouse</loc>
+    <loc>https://www.shahryarstore.com/warehouse</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -18,9 +19,18 @@
 
   <!-- درباره ما (About Us) -->
   <url>
-    <loc>https://shahryarstore.com/about</loc>
+    <loc>https://www.shahryarstore.com/about</loc>
     <lastmod>2025-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <!-- نسخه انگلیسی (اگر فعال است) -->
+  <url>
+    <loc>https://www.shahryarstore.com/en</loc>
+    <lastmod>2025-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
