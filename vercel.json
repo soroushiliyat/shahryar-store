@@ -1,6 +1,11 @@
 {
   
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)",
+      "destination": "https://shahryarstore.com/$1",
+      "permanent": true
+
+      
+    }
   ]
 }
